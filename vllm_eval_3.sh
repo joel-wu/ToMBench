@@ -30,15 +30,26 @@
 #    --output_dir "/home/ubuntu/ToMBench/llama3.1-8B-Instruct-w8-gptq-zh" \
 #    --batch_size 64
 
-CUDA_VISIBLE_DEVICES=3 python3 vllm_run_3.py \
+#CUDA_VISIBLE_DEVICES=3 python3 vllm_run_3.py \
+#    --task "" \
+#    --model_name "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
+#    --model_name2 "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
+#    --language "eg" \
+#    --cot True \
+#    --try_times 5 \
+#    --model_path "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
+#    --output_dir "/home/ubuntu/ToMBench/qwen2.5-32B-Instruct-w4-gptq-eg" \
+#    --batch_size 64
+
+CUDA_VISIBLE_DEVICES=1 python3 vllm_run_3.py \
     --task "" \
-    --model_name "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
-    --model_name2 "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
+    --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" \
+    --model_name2 "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" \
     --language "eg" \
     --cot True \
     --try_times 5 \
-    --model_path "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4" \
-    --output_dir "/home/ubuntu/ToMBench/qwen2.5-32B-Instruct-w4-gptq-eg" \
+    --model_path "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" \
+    --output_dir "/home/ubuntu/ToMBench/DeepSeek-R1-Distill-Qwen-1.5B-eg" \
     --batch_size 64
 
 
