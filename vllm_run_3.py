@@ -170,17 +170,18 @@ if __name__ == "__main__":
     from transformers import AutoTokenizer
     import shutil
 
-    # 检查 tokenizer 文件是否存在
-    tokenizer_path = os.path.join(args.model_path, "tokenizer_config.json")
-    if not os.path.exists(tokenizer_path):
-        print("[Info] tokenizer not found in fake model dir, fallback to HF tokenizer")
-
-        # 用 model_name 作为 HF 模型名加载
-        hf_tokenizer = AutoTokenizer.from_pretrained(args.model_name2, trust_remote_code=True)
-
-        # 保存 tokenizer 到 fake 模型目录
-        hf_tokenizer.save_pretrained(args.model_path)
-        print("[Info] tokenizer saved to:", args.model_path)
+    # # 检查 tokenizer 文件是否存在
+    # tokenizer_path = os.path.join(args.model_path, "tokenizer_config.json")
+    # print(tokenizer_path)
+    # if not os.path.exists(tokenizer_path):
+    #     print("[Info] tokenizer not found in fake model dir, fallback to HF tokenizer")
+    #
+    #     # 用 model_name 作为 HF 模型名加载
+    #     hf_tokenizer = AutoTokenizer.from_pretrained(args.model_name2, trust_remote_code=True)
+    #
+    #     # 保存 tokenizer 到 fake 模型目录
+    #     hf_tokenizer.save_pretrained(args.model_path)
+    #     print("[Info] tokenizer saved to:", args.model_path)
 
 
     llm = LLM(
