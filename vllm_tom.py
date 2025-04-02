@@ -524,7 +524,7 @@ def process_model(model_name, model_path):
 
     for rep in range(1, 6):
         for t in ["unexpected", "transfer", "irony"]:
-            output_path = f"/home/ubuntu/ToMBench/kosinski/{model_name}/{rep}/{t}/results.csv"
+            output_path = f"/home/ubuntu/ToMBench/kosinski2/{model_name}/{rep}/0.0/{t}/results.csv"
             output_dir = os.path.dirname(output_path)
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
@@ -557,10 +557,10 @@ def process_model(model_name, model_path):
 
 def main():
     configurations = [
-        # {"model_path": "meta-llama/Llama-3.1-8B-Instruct", "model_name": "llama3.1-8B-Instruct"},
-        # {"model_path": "Qwen/Qwen2.5-7B-Instruct", "model_name": "qwen2.5-7B-Instruct"},
-        # {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/llama3.1-8B-instruct-w8-g128-awq", "model_name": "llama3.1-8B-Instruct-awq-w8"},
-        # {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/llama3.1-8B-instruct-w4-g128-awq", "model_name": "llama3.1-8B-Instruct-awq-w4"},
+        {"model_path": "meta-llama/Llama-3.1-8B-Instruct", "model_name": "llama3.1-8B-Instruct"},
+        {"model_path": "Qwen/Qwen2.5-7B-Instruct", "model_name": "qwen2.5-7B-Instruct"},
+        {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/llama3.1-8B-instruct-w8-g128-awq", "model_name": "llama3.1-8B-Instruct-awq-w8"},
+        {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/llama3.1-8B-instruct-w4-g128-awq", "model_name": "llama3.1-8B-Instruct-awq-w4"},
         {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/llama3.1-8B-instruct-w3-g128-awq", "model_name": "llama3.1-8B-Instruct-awq-w3"},
         {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/qwen2.5-7B-instruct-w3-g128-awq", "model_name": "qwen2.5-7B-Instruct-awq-w3"},
         {"model_path": "/home/ubuntu/comp-trust/compression/llm-awq/fake_cache/qwen2.5-7B-instruct-w4-g128-awq","model_name": "qwen2.5-7B-Instruct-awq-w4"},
